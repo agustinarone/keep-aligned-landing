@@ -1,0 +1,184 @@
+---
+// App showcase section with interactive mockups
+import HomeScreenMockup from './mockups/HomeScreenMockup.astro';
+import CalendarMockup from './mockups/CalendarMockup.astro';
+import TimerMockup from './mockups/TimerMockup.astro';
+import ProgressMockup from './mockups/ProgressMockup.astro';
+---
+
+<section id="app" class="py-20 md:py-28 bg-gradient-to-b from-neutral-50 to-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+        Mirá la app en acción
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+        Diseñada para que <span class="text-brand-500">cumplas tu tratamiento</span>
+      </h2>
+      <p class="text-lg text-neutral-600">
+        Una interfaz simple e intuitiva que te muestra exactamente lo que necesitás saber, 
+        sin complicaciones.
+      </p>
+    </div>
+
+    <!-- Mockups showcase with tabs -->
+    <div class="relative" x-data="{ activeTab: 'home' }">
+      <!-- Tab buttons -->
+      <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+        <button 
+          class="showcase-tab px-5 py-3 rounded-xl font-medium transition-all bg-brand-500 text-white shadow-brand"
+          data-tab="home"
+        >
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Dashboard
+          </span>
+        </button>
+        <button 
+          class="showcase-tab px-5 py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+          data-tab="timer"
+        >
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Timer
+          </span>
+        </button>
+        <button 
+          class="showcase-tab px-5 py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+          data-tab="calendar"
+        >
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Calendario
+          </span>
+        </button>
+        <button 
+          class="showcase-tab px-5 py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+          data-tab="progress"
+        >
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            Progreso
+          </span>
+        </button>
+      </div>
+
+      <!-- Mockups container -->
+      <div class="relative flex justify-center">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="w-96 h-96 bg-brand-100 rounded-full blur-3xl opacity-50"></div>
+        </div>
+
+        <!-- Mockup panels -->
+        <div class="relative">
+          <div id="mockup-home" class="showcase-panel">
+            <HomeScreenMockup />
+          </div>
+          <div id="mockup-timer" class="showcase-panel hidden">
+            <TimerMockup />
+          </div>
+          <div id="mockup-calendar" class="showcase-panel hidden">
+            <CalendarMockup />
+          </div>
+          <div id="mockup-progress" class="showcase-panel hidden">
+            <ProgressMockup />
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature highlights for each tab -->
+      <div class="mt-12 max-w-2xl mx-auto">
+        <div id="desc-home" class="showcase-desc text-center">
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">Tu resumen del día</h3>
+          <p class="text-neutral-600">
+            Ve de un vistazo cuántas horas llevás hoy, tu racha actual y el progreso de tu tratamiento.
+          </p>
+        </div>
+        <div id="desc-timer" class="showcase-desc text-center hidden">
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">Control preciso de remociones</h3>
+          <p class="text-neutral-600">
+            Cuando te sacás los alineadores, el timer te muestra cuánto tiempo te queda disponible 
+            para no afectar tu tratamiento.
+          </p>
+        </div>
+        <div id="desc-calendar" class="showcase-desc text-center hidden">
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">Historial visual intuitivo</h3>
+          <p class="text-neutral-600">
+            Colores claros te muestran tu desempeño: verde para días excelentes, amarillo para días regulares, 
+            y rojo para días que podrían mejorar.
+          </p>
+        </div>
+        <div id="desc-progress" class="showcase-desc text-center hidden">
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">Seguí tu camino hacia la sonrisa perfecta</h3>
+          <p class="text-neutral-600">
+            Sabé exactamente en qué punto de tu tratamiento estás, cuántos alineadores te faltan 
+            y cuándo es momento de cambiar al siguiente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Simple tab functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.showcase-tab');
+    const panels = document.querySelectorAll('.showcase-panel');
+    const descs = document.querySelectorAll('.showcase-desc');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetTab = tab.getAttribute('data-tab');
+
+        // Update tab styles
+        tabs.forEach(t => {
+          t.classList.remove('bg-brand-500', 'text-white', 'shadow-brand');
+          t.classList.add('bg-neutral-100', 'text-neutral-600');
+        });
+        tab.classList.remove('bg-neutral-100', 'text-neutral-600');
+        tab.classList.add('bg-brand-500', 'text-white', 'shadow-brand');
+
+        // Show/hide panels with animation
+        panels.forEach(panel => {
+          panel.classList.add('hidden');
+        });
+        document.getElementById(`mockup-${targetTab}`)?.classList.remove('hidden');
+
+        // Show/hide descriptions
+        descs.forEach(desc => {
+          desc.classList.add('hidden');
+        });
+        document.getElementById(`desc-${targetTab}`)?.classList.remove('hidden');
+      });
+    });
+  });
+</script>
+
+<style>
+  .showcase-panel {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+

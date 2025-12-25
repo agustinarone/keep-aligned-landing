@@ -1,0 +1,61 @@
+---
+// Feature card component
+interface Props {
+  icon: 'timer' | 'calendar' | 'progress' | 'camera';
+  title: string;
+  description: string;
+  color: 'brand' | 'success' | 'warning' | 'danger';
+}
+
+const { icon, title, description, color } = Astro.props;
+
+const colorClasses = {
+  brand: 'bg-brand-100 text-brand-600',
+  success: 'bg-success-100 text-success-600',
+  warning: 'bg-warning-100 text-warning-600',
+  danger: 'bg-danger-100 text-danger-600',
+};
+
+const borderClasses = {
+  brand: 'hover:border-brand-200',
+  success: 'hover:border-success-200',
+  warning: 'hover:border-warning-200',
+  danger: 'hover:border-danger-200',
+};
+---
+
+<div class={`bg-white border border-neutral-200 rounded-2xl p-6 lg:p-8 transition-all hover:shadow-lg hover:-translate-y-1 ${borderClasses[color]}`}>
+  <div class="flex items-start gap-5">
+    <!-- Icon -->
+    <div class={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 ${colorClasses[color]}`}>
+      {icon === 'timer' && (
+        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )}
+      {icon === 'calendar' && (
+        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      )}
+      {icon === 'progress' && (
+        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      )}
+      {icon === 'camera' && (
+        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      )}
+    </div>
+
+    <!-- Content -->
+    <div>
+      <h3 class="text-xl font-bold text-neutral-900 mb-2">{title}</h3>
+      <p class="text-neutral-600 leading-relaxed">{description}</p>
+    </div>
+  </div>
+</div>
+

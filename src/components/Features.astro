@@ -1,0 +1,97 @@
+---
+// Features section with 4 main capabilities
+import FeatureCard from './FeatureCard.astro';
+---
+
+<section id="features" class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+        Funciones principales
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+        Todo lo que necesitás para tu tratamiento
+      </h2>
+      <p class="text-lg text-neutral-600">
+        Keep Aligned te da las herramientas para cumplir las 22 horas diarias recomendadas 
+        y mantener tu tratamiento en el camino correcto.
+      </p>
+    </div>
+
+    <!-- Features grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <FeatureCard
+        icon="timer"
+        title="Timer Inteligente"
+        description="Registrá cada vez que te sacás los alineadores. El timer cuenta automáticamente el tiempo y te avisa cuando debés volver a ponértelos."
+        color="brand"
+      />
+      
+      <FeatureCard
+        icon="calendar"
+        title="Calendario Visual"
+        description="Mirá de un vistazo tu cumplimiento diario con colores. Verde si superaste las 22 horas, amarillo si estás cerca, rojo si te quedaste corto."
+        color="success"
+      />
+      
+      <FeatureCard
+        icon="progress"
+        title="Progreso de Alineadores"
+        description="Llevá el control de en qué alineador estás, cuántos te faltan y cuándo es momento de cambiar al siguiente."
+        color="warning"
+      />
+      
+      <FeatureCard
+        icon="camera"
+        title="Galería de Sonrisas"
+        description="Documentá tu progreso con fotos. Compará el antes y después y motivate viendo cómo cambia tu sonrisa con el tiempo."
+        color="danger"
+      />
+    </div>
+
+    <!-- Extra benefits -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="text-center">
+        <div class="w-14 h-14 bg-neutral-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-neutral-900 mb-1">Recordatorios</h3>
+        <p class="text-sm text-neutral-500">Notificaciones inteligentes</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-14 h-14 bg-neutral-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-neutral-900 mb-1">Privacidad</h3>
+        <p class="text-sm text-neutral-500">Tus datos protegidos</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-14 h-14 bg-neutral-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-neutral-900 mb-1">Sincronización</h3>
+        <p class="text-sm text-neutral-500">Datos en la nube</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-14 h-14 bg-neutral-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-neutral-900 mb-1">Gratis</h3>
+        <p class="text-sm text-neutral-500">Sin costo oculto</p>
+      </div>
+    </div>
+  </div>
+</section>
+

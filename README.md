@@ -1,43 +1,73 @@
-# Astro Starter Kit: Minimal
+# Keep Aligned Landing Page
 
-```sh
-npm create astro@latest -- --template minimal
+Landing page para [keepaligned.com](https://keepaligned.com) - La app para seguir tu tratamiento de ortodoncia invisible.
+
+## Stack
+
+- **[Astro](https://astro.build/)** - Framework para sitios estáticos ultra-rápidos
+- **[Tailwind CSS v4](https://tailwindcss.com/)** - Estilos con design tokens personalizados
+- **[Netlify](https://netlify.com/)** - Hosting y deploy automático
+
+## Desarrollo
+
+```bash
+# Instalar dependencias
+npm install
+
+# Servidor de desarrollo (http://localhost:4321)
+npm run dev
+
+# Build para producción
+npm run build
+
+# Preview del build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Estructura
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+├── components/
+│   ├── Header.astro          # Navegación y logo
+│   ├── Footer.astro          # Footer con links
+│   ├── Hero.astro            # Sección principal con CTA
+│   ├── Features.astro        # Grid de funcionalidades
+│   ├── FeatureCard.astro     # Tarjeta de feature
+│   ├── AppShowcase.astro     # Showcase con tabs interactivos
+│   ├── ForOrthodontists.astro # Sección para profesionales
+│   ├── FinalCTA.astro        # CTA final de descarga
+│   ├── DownloadButtons.astro # Botones de App Store/Play Store
+│   └── mockups/
+│       ├── PhoneFrame.astro      # Marco de teléfono
+│       ├── HomeScreenMockup.astro
+│       ├── CalendarMockup.astro
+│       ├── TimerMockup.astro
+│       └── ProgressMockup.astro
+├── layouts/
+│   └── Layout.astro          # Layout base con meta tags
+├── pages/
+│   └── index.astro           # Página principal
+└── styles/
+    └── global.css            # Design system tokens
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Design System
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Los tokens de diseño están definidos en `src/styles/global.css` usando Tailwind CSS v4 `@theme`:
 
-Any static assets, like images, can be placed in the `public/` directory.
+- **Colores**: Brand blues, neutrals, success/warning/danger
+- **Tipografía**: Plus Jakarta Sans
+- **Espaciado y radios**: Consistentes con la app móvil
 
-## 🧞 Commands
+## Deploy
 
-All commands are run from the root of the project, from a terminal:
+El sitio se despliega automáticamente en Netlify cuando se hace push a `main`.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Configuración en `netlify.toml`:
+- Build command: `npm run build`
+- Publish directory: `dist`
 
-## 👀 Want to learn more?
+## Relacionado
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **[keep-aligned-mobile](https://github.com/agustinarone/keep-aligned-mobile)** - App móvil React Native/Expo
