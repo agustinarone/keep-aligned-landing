@@ -2,46 +2,49 @@
 // Header component with logo and download CTA
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-neutral-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 md:h-20">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center shadow-brand transition-transform group-hover:scale-105">
-          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="1.5" fill="white"/>
-            <circle cx="20" cy="12" r="1.5" fill="white"/>
-            <path d="M11 18c1.5 2 3.5 2 5 2s3.5 0 5-2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-            <rect x="10" y="22" width="12" height="3" rx="1.5" fill="white" fill-opacity="0.9"/>
-          </svg>
-        </div>
-        <span class="text-xl font-bold text-neutral-900">Keep Aligned</span>
-      </a>
+<header class="fixed top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+  <div class="w-full max-w-5xl pointer-events-auto">
+    <div class="bg-white/80 backdrop-blur-xl border border-white/40 shadow-lg shadow-neutral-500/5 rounded-2xl md:rounded-full px-4 sm:px-6 py-2">
+      <div class="flex items-center justify-between h-14 md:h-14">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 bg-brand-500 rounded-full flex items-center justify-center shadow-brand transition-transform group-hover:scale-105">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="1.5" fill="white"/>
+              <circle cx="20" cy="12" r="1.5" fill="white"/>
+              <path d="M11 18c1.5 2 3.5 2 5 2s3.5 0 5-2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="10" y="22" width="12" height="3" rx="1.5" fill="white" fill-opacity="0.9"/>
+            </svg>
+          </div>
+          <span class="text-lg font-bold text-neutral-900">Keep Aligned</span>
+        </a>
 
-      <!-- Navigation -->
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="#features" class="text-neutral-600 hover:text-brand-500 font-medium transition-colors">
-          Funciones
-        </a>
-        <a href="#app" class="text-neutral-600 hover:text-brand-500 font-medium transition-colors">
-          La App
-        </a>
-        <a href="#orthodontists" class="text-neutral-600 hover:text-brand-500 font-medium transition-colors">
-          Ortodoncistas
-        </a>
-      </nav>
+        <!-- Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#features" class="text-sm font-medium text-neutral-600 hover:text-brand-500 transition-colors">
+            Funciones
+          </a>
+          <a href="#app" class="text-sm font-medium text-neutral-600 hover:text-brand-500 transition-colors">
+            La App
+          </a>
+          <a href="#orthodontists" class="text-sm font-medium text-neutral-600 hover:text-brand-500 transition-colors">
+            Ortodoncistas
+          </a>
+        </nav>
 
-      <!-- CTA Button -->
-      <a 
-        href="#download" 
-        class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-xl shadow-brand transition-all hover:shadow-lg hover:-translate-y-0.5"
-      >
-        Descargar App
-      </a>
+        <!-- CTA Button -->
+        <a 
+          href="#download" 
+          class="bg-neutral-900 hover:bg-neutral-800 text-white text-sm font-medium px-4 sm:px-5 py-2 rounded-full shadow-lg shadow-neutral-500/20 transition-all hover:-translate-y-0.5"
+        >
+          <span class="sm:hidden">Descargar</span>
+          <span class="hidden sm:inline">Descargar App</span>
+        </a>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- Spacer for fixed header -->
-<div class="h-16 md:h-20"></div>
+<!-- Spacer removed for floating header -->
+<!-- <div class="h-16 md:h-20"></div> -->
 

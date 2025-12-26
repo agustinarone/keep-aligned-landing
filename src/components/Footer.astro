@@ -48,30 +48,32 @@ const currentYear = new Date().getFullYear();
           <li>
             <a href="/privacy" class="text-neutral-400 hover:text-white transition-colors">Privacidad</a>
           </li>
-          <li>
-            <a href="/terms" class="text-neutral-400 hover:text-white transition-colors">Términos</a>
-          </li>
-          <li>
-            <a href="mailto:hello@keepaligned.com" class="text-neutral-400 hover:text-white transition-colors">Contacto</a>
-          </li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom bar -->
     <div class="mt-12 pt-8 border-t border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-neutral-500 text-sm">
-        © {currentYear} Keep Aligned. Todos los derechos reservados.
-      </p>
+      <div class="text-center md:text-left">
+        <p class="text-neutral-500 text-sm mb-2 md:mb-0">
+          © {currentYear} Keep Aligned. Todos los derechos reservados.
+        </p>
+        <p class="text-neutral-600 text-xs">
+          Designed & Built by 
+          <a href="https://www.linkedin.com/in/agustinarone/" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-400 transition-colors">Agustín Arone</a> 
+          & 
+          <a href="https://www.linkedin.com/in/juancruz-mancusomicka/" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-400 transition-colors">Juan Mancuso</a>
+        </p>
+      </div>
       
       <!-- Store badges small -->
       <div class="flex items-center gap-4">
-        <a href="#" class="opacity-60 hover:opacity-100 transition-opacity">
+        <a href="https://apps.apple.com/ar/app/keep-aligned/id6755775658" target="_blank" rel="noopener noreferrer" class="opacity-60 hover:opacity-100 transition-opacity">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" class="h-8" />
         </a>
-        <a href="#" class="opacity-60 hover:opacity-100 transition-opacity">
+        <div class="opacity-30 cursor-not-allowed">
           <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="h-12 -my-2" />
-        </a>
+        </div>
       </div>
     </div>
   </div>

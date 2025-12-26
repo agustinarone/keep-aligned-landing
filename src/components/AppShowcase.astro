@@ -3,7 +3,7 @@
 import HomeScreenMockup from './mockups/HomeScreenMockup.astro';
 import CalendarMockup from './mockups/CalendarMockup.astro';
 import TimerMockup from './mockups/TimerMockup.astro';
-import ProgressMockup from './mockups/ProgressMockup.astro';
+import DailyLogMockup from './mockups/DailyLogMockup.astro';
 ---
 
 <section id="app" class="py-20 md:py-28 bg-gradient-to-b from-neutral-50 to-white overflow-hidden">
@@ -27,47 +27,47 @@ import ProgressMockup from './mockups/ProgressMockup.astro';
       <!-- Tab buttons -->
       <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
         <button 
-          class="showcase-tab px-5 py-3 rounded-xl font-medium transition-all bg-brand-500 text-white shadow-brand"
+          class="showcase-tab px-3 py-2 md:px-5 md:py-3 rounded-xl font-medium transition-all bg-brand-500 text-white shadow-brand text-sm md:text-base"
           data-tab="home"
         >
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
             Dashboard
           </span>
         </button>
         <button 
-          class="showcase-tab px-5 py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+          class="showcase-tab px-3 py-2 md:px-5 md:py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200 text-sm md:text-base"
           data-tab="timer"
         >
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             Timer
           </span>
         </button>
         <button 
-          class="showcase-tab px-5 py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+          class="showcase-tab px-3 py-2 md:px-5 md:py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200 text-sm md:text-base"
           data-tab="calendar"
         >
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             Calendario
           </span>
         </button>
         <button 
-          class="showcase-tab px-5 py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-          data-tab="progress"
+          class="showcase-tab px-3 py-2 md:px-5 md:py-3 rounded-xl font-medium transition-all bg-neutral-100 text-neutral-600 hover:bg-neutral-200 text-sm md:text-base"
+          data-tab="dailylog"
         >
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Progreso
+            Carga de uso
           </span>
         </button>
       </div>
@@ -90,8 +90,8 @@ import ProgressMockup from './mockups/ProgressMockup.astro';
           <div id="mockup-calendar" class="showcase-panel hidden">
             <CalendarMockup />
           </div>
-          <div id="mockup-progress" class="showcase-panel hidden">
-            <ProgressMockup />
+          <div id="mockup-dailylog" class="showcase-panel hidden">
+            <DailyLogMockup />
           </div>
         </div>
       </div>
@@ -118,11 +118,11 @@ import ProgressMockup from './mockups/ProgressMockup.astro';
             y rojo para días que podrían mejorar.
           </p>
         </div>
-        <div id="desc-progress" class="showcase-desc text-center hidden">
-          <h3 class="text-xl font-bold text-neutral-900 mb-2">Seguí tu camino hacia la sonrisa perfecta</h3>
+        <div id="desc-dailylog" class="showcase-desc text-center hidden">
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">Carga de uso simplificada</h3>
           <p class="text-neutral-600">
-            Sabé exactamente en qué punto de tu tratamiento estás, cuántos alineadores te faltan 
-            y cuándo es momento de cambiar al siguiente.
+            Registrá tu uso diario de forma rápida y sencilla. Elegí entre Excelente, Regular o Bajo 
+            y mantené un historial preciso de tu tratamiento.
           </p>
         </div>
       </div>
